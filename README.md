@@ -11,27 +11,27 @@ library(readr)
 
 library(gtrendsR)
 
-# Load your keywords list (.csv file)
+**Load your keywords list (.csv file)**
 
 kwlist = readLines("variables.csv")
 
-# The for loop downloads the data for every single keyword in your list
+**The for loop downloads the data for every single keyword in your list**
 
 resultslist <- list() 
 
 for (keywords in kwlist){
 
-# Choose countries 
+**Choose countries**
 
   country=c('GB-ENG', 'GB-SCT', 'GB-WLS')
 
-# Define time period
+**Define time period**
 
   time=("2015-01-01 2019-09-30")
 
   channel='web'
 
-# Obtain google data
+**Obtain google data**
 
 trends = gtrends(keywords, gprop =channel,geo=country, time = time )
 
@@ -39,13 +39,14 @@ resultslist[[keywords]] <- trends$interest_over_time
 
 }
 
-# Generate output data frame
+**Generate output data frame**
 
 output <- as.data.frame(do.call("rbind", resultslist)) 
 
-# Download the data frame "output" as a .csv file
+**Download the data frame "output" as a .csv file**
 
 write.csv(output,"output.csv")
+
 
 **Katherine Stapleton, DPhil Candidate in Economics, Lincoln College, Oxford, 29 October 2019**
 
