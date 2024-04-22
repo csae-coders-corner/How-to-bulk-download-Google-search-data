@@ -1,3 +1,6 @@
+
+![CC Graphics 2024_DownloadData](https://github.com/csae-coders-corner/How-to-bulk-download-Google-search-data/assets/148211163/f1c0608d-c4c6-430d-a33c-bf567946209a)
+
 # How-to-bulk-download-Google-search-data
 Google Trends is a great data source, but unfortunately, their API only lets you compare 5 search terms at once. In addition, it scales search intensity to be relative to the other search terms, making it complicated and tedious if you want to download a large number of searches at once. Luckily, there is a great R package called ‘GTrendsR’ that helps you to return search intensity for a larger number of terms across a range of dates and regions. In this R code, I show you how to combine GTrendsR with an additional loop so that you can bulk download search terms into a csv file.
 
