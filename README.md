@@ -8,17 +8,22 @@ First create a file with the terms you want to search for and save it with a .cs
 
 Next find the correct country code and fill this in, along with the dates you are interested in. This code would be if searching for search intensity in England, Scotland and Wales. The code is:
 
+```
 installed.packages("readr","gtrendsR")
 
 library(readr)
 
 library(gtrendsR)
+```
 
-**Load your keywords list (.csv file)**
+### Load your keywords list (.csv file)
 
+```
 kwlist = readLines("variables.csv")
+```
 
-**The for loop downloads the data for every single keyword in your list**
+The for loop downloads the data for every single keyword in your list
+
 
 resultslist <- list() 
 
@@ -49,7 +54,7 @@ output <- as.data.frame(do.call("rbind", resultslist))
 **Download the data frame "output" as a .csv file**
 
 write.csv(output,"output.csv")
-
+```
 
 **Katherine Stapleton, DPhil Candidate in Economics, Lincoln College, Oxford, 29 October 2019**
 
