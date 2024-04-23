@@ -20,7 +20,6 @@ library(gtrendsR)
 
 ```
 kwlist = readLines("variables.csv")
-```
 
 The for loop downloads the data for every single keyword in your list
 
